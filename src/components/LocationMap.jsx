@@ -1,12 +1,10 @@
-import { motion } from 'framer-motion';
 import { MapPin, Navigation, Phone, MessageCircle } from 'lucide-react';
 import SectionHeading from './ui/SectionHeading';
 import { brand } from '../data/content';
-import { fadeUp, viewportOnce } from '../utils/motion';
 
 export default function LocationMap() {
   return (
-    <section id="location" className="py-14 md:py-20" aria-labelledby="location-heading">
+    <section id="location" className="py-10 md:py-14" aria-labelledby="location-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Visit Us"
@@ -15,12 +13,8 @@ export default function LocationMap() {
           subtitle="Conveniently located in Lajpat Nagar, central New Delhi. Tap below to call, message, or get directions instantly."
         />
 
-        <motion.div
+        <div
           className="grid lg:grid-cols-5 gap-6 lg:gap-8 items-stretch"
-          initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
-          variants={fadeUp}
         >
           <div className="lg:col-span-2 glass rounded-2xl p-5 sm:p-6 shadow-glass border border-rose-gold/30 flex flex-col">
             <div className="flex items-start gap-3.5 mb-4">
@@ -91,7 +85,7 @@ export default function LocationMap() {
             <iframe
               title="Clinic location map"
               src={brand.mapEmbed}
-              loading="lazy"
+              loading="eager"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 w-full h-full border-0"
               allowFullScreen
@@ -108,7 +102,7 @@ export default function LocationMap() {
               Open in Google Maps
             </div>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
