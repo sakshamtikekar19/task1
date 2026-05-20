@@ -9,6 +9,7 @@ import StatsBanner from './components/StatsBanner';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import AppointmentCTA from './components/AppointmentCTA';
+import FAQ from './components/FAQ';
 import LocationMap from './components/LocationMap';
 import Footer from './components/Footer';
 import WhatsAppFab from './components/ui/WhatsAppFab';
@@ -17,9 +18,15 @@ import ScrollProgress from './components/ui/ScrollProgress';
 function App() {
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:px-4 focus:py-2 focus:rounded-full focus:bg-rose-deep focus:text-white focus:shadow-luxe focus:text-sm focus:font-semibold"
+      >
+        Skip to main content
+      </a>
       <ScrollProgress />
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Marquee />
         <About />
@@ -29,6 +36,7 @@ function App() {
         <StatsBanner />
         <Testimonials />
         <Gallery />
+        <FAQ />
         <AppointmentCTA />
         <LocationMap />
       </main>

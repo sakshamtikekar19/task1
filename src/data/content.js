@@ -29,6 +29,7 @@ export const navLinks = [
   { label: 'Process', href: '#process' },
   { label: 'Why Us', href: '#why-us' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -279,6 +280,29 @@ export const processSteps = [
   },
 ];
 
+export const faqs = [
+  {
+    q: "Where is Dr. Ritham Debnath's dental clinic located?",
+    a: "The clinic is located at B-85, Lajpat Nagar-II, New Delhi – 110024. Tap the 'Get Directions' button on the website for turn-by-turn navigation.",
+  },
+  {
+    q: 'What are the clinic timings?',
+    a: 'Monday to Saturday: 9:00 AM – 8:00 PM. Sunday: 10:00 AM – 2:00 PM by appointment only.',
+  },
+  {
+    q: 'How can I book an appointment?',
+    a: 'You can book by filling out the appointment form on the website, calling +91 98836 74157, or sending a WhatsApp message. Our team responds within 24 hours.',
+  },
+  {
+    q: 'Are dental procedures painless?',
+    a: 'Yes. We use comfort-first protocols with modern anesthesia, laser-assisted procedures, and anxiety-free treatment workflows so every visit is calm and pain-free.',
+  },
+  {
+    q: 'Do you offer cosmetic dentistry and smile design?',
+    a: 'Yes. We offer veneers, professional whitening, smile designing with digital previews, clear aligners, and full cosmetic restorations tailored to your facial features.',
+  },
+];
+
 export const bigStats = [
   { value: '12+', label: 'Years of Expertise' },
   { value: '5000+', label: 'Smiles Transformed' },
@@ -295,6 +319,7 @@ export const footerLinks = {
     { label: 'Why Us', href: '#why-us' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'Gallery', href: '#gallery' },
+    { label: 'FAQ', href: '#faq' },
     { label: 'Book Appointment', href: '#contact' },
   ],
   services: services.map((s) => ({ label: s.title, href: '#services' })),

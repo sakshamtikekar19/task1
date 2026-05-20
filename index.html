@@ -5,8 +5,25 @@
     <link rel="icon" type="image/png" href="./logo.png" />
     <link rel="apple-touch-icon" href="./logo.png" />
     <link rel="preload" as="image" href="./logo.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=1000&q=85&auto=format&fit=crop"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://images.pexels.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#C46F78" />
+    <meta name="author" content="Dr. Ritham Debnath" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="Lajpat Nagar, New Delhi" />
+    <meta name="geo.position" content="28.5685;77.2400" />
+    <meta name="ICBM" content="28.5685, 77.2400" />
     <meta
       name="description"
       content="Dr. Ritham Debnath – Consultant Dental Surgeon in Lajpat Nagar, New Delhi. Premium cosmetic dentistry, implants, smile designing, and pain-free dental care."
@@ -21,6 +38,9 @@
     />
     <meta property="og:url" content="https://sakshamtikekar19.github.io/task1/" />
     <meta property="og:image" content="https://sakshamtikekar19.github.io/task1/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dr. Ritham Debnath – Consultant Dental Surgeon logo" />
     <meta property="og:site_name" content="Dr. Ritham Debnath" />
     <meta property="og:locale" content="en_IN" />
 
@@ -44,20 +64,36 @@
       {
         "@context": "https://schema.org",
         "@type": "Dentist",
-        "name": "Dr. Ritham Debnath",
-        "description": "Consultant Dental Surgeon offering cosmetic dentistry, implants, root canal, teeth whitening, smile designing, and orthodontics.",
+        "@id": "https://sakshamtikekar19.github.io/task1/#dentist",
+        "name": "Dr. Ritham Debnath – Consultant Dental Surgeon",
+        "alternateName": "Dr. Ritham Debnath Dental Clinic",
+        "description": "Premium cosmetic dentistry, implants, root canal, teeth whitening, smile designing, and orthodontics in Lajpat Nagar, New Delhi.",
         "url": "https://sakshamtikekar19.github.io/task1/",
         "image": "https://sakshamtikekar19.github.io/task1/logo.png",
+        "logo": "https://sakshamtikekar19.github.io/task1/logo.png",
         "telephone": "+91-9883674157",
         "email": "rhitam.debnath95@gmail.com",
         "priceRange": "$$",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "B-85, Lajpat Nagar-II",
           "addressLocality": "New Delhi",
+          "addressRegion": "DL",
           "postalCode": "110024",
           "addressCountry": "IN"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.5685,
+          "longitude": 77.2400
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=B-85%2C%20Lajpat%20Nagar-II%2C%20New%20Delhi%20110024",
+        "areaServed": [
+          { "@type": "City", "name": "New Delhi" },
+          { "@type": "AdministrativeArea", "name": "Delhi NCR" }
+        ],
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -75,8 +111,101 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
-          "reviewCount": "600"
-        }
+          "reviewCount": "600",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Dr. Ritham Debnath",
+          "jobTitle": "Consultant Dental Surgeon",
+          "worksFor": { "@id": "https://sakshamtikekar19.github.io/task1/#dentist" },
+          "image": "https://sakshamtikekar19.github.io/task1/logo.png"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Dental Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Cosmetic Dentistry", "description": "Veneers, bonding, and aesthetic restorations tailored to your facial features." } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Root Canal Treatment", "description": "Gentle, precision endodontic care that saves natural teeth while eliminating pain." } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Dental Implants", "description": "Permanent, natural-looking tooth replacements using advanced implant systems." } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Teeth Whitening", "description": "Professional-grade whitening for a radiant, even smile." } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Smile Designing", "description": "Digital smile previews and bespoke treatment plans." } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Braces & Aligners", "description": "Discreet orthodontic solutions including clear aligners." } }
+          ]
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "author": { "@type": "Person", "name": "Priya Sharma" },
+            "reviewBody": "Dr. Ritham transformed my smile beyond what I imagined. The entire experience felt luxurious — painless, professional, and truly caring."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "author": { "@type": "Person", "name": "Arjun Mehta" },
+            "reviewBody": "I was nervous about implants, but the team made me feel completely at ease. The results look and feel completely natural."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "author": { "@type": "Person", "name": "Ananya Das" },
+            "reviewBody": "The clinic is stunning and immaculate. My teeth are several shades brighter after just one session. Highly recommend!"
+          }
+        ],
+        "sameAs": [
+          "https://wa.me/919883674157"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where is Dr. Ritham Debnath's dental clinic located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The clinic is located at B-85, Lajpat Nagar-II, New Delhi – 110024. Tap the 'Get Directions' button on the website for turn-by-turn navigation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the clinic timings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Monday to Saturday: 9:00 AM – 8:00 PM. Sunday: 10:00 AM – 2:00 PM by appointment only."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I book an appointment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can book by filling out the appointment form on the website, calling +91 98836 74157, or sending a WhatsApp message. Our team responds within 24 hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are dental procedures painless?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We use comfort-first protocols with modern anesthesia, laser-assisted procedures, and anxiety-free treatment workflows so every visit is calm and pain-free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer cosmetic dentistry and smile design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We offer veneers, professional whitening, smile designing with digital previews, clear aligners, and full cosmetic restorations tailored to your facial features."
+            }
+          }
+        ]
       }
     </script>
   </head>
