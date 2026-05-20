@@ -2,6 +2,8 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import { brand, footerLinks, socialLinks } from '../data/content';
 import { getIcon } from '../utils/icons';
 
+const LOGO_SRC = `${import.meta.env.BASE_URL}logo.png`;
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -19,7 +21,7 @@ export default function Footer() {
                   className="absolute -inset-4 rounded-full bg-rose-deep/30 blur-2xl"
                 />
                 <img
-                  src="/logo.png"
+                  src={LOGO_SRC}
                   alt="Dr. Ritham Debnath logo"
                   className="relative h-16 w-16 object-contain"
                 />

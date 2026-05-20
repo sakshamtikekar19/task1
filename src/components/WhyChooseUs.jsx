@@ -36,13 +36,36 @@ export default function WhyChooseUs() {
                 className="[perspective:1200px]"
               >
                 <TiltCard
-                  className="group glass rounded-2xl p-5 pl-6 shadow-glass h-full transition-[border-color,box-shadow] duration-500"
+                  className="group glass rounded-2xl shadow-glass h-full overflow-hidden transition-[border-color,box-shadow] duration-500"
                   intensity={5}
                   spotlightColor="rgba(216,144,154,0.2)"
                 >
+                  {item.image && (
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
+                        loading="lazy"
+                        decoding="async"
+                        width={800}
+                        height={450}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-rose-wine/70 via-rose-wine/15 to-transparent" />
+                      <span className="absolute top-2 left-3 font-display text-3xl font-medium text-white/85 drop-shadow-md">
+                        {item.number}
+                      </span>
+                      <div className="absolute bottom-2 left-3 flex items-center gap-2">
+                        <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-white/95 text-rose-deep shadow-luxe transition-all duration-500 group-hover:bg-rose-gradient group-hover:text-white group-hover:-rotate-6 group-hover:scale-110">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <span
                     aria-hidden
-                    className="absolute left-0 top-5 bottom-5 w-[3px] rounded-full bg-rose-gradient origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                    className="absolute left-0 top-1/3 bottom-1/3 w-[3px] rounded-full bg-rose-gradient origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                   />
 
                   <motion.span
@@ -52,18 +75,7 @@ export default function WhyChooseUs() {
                     transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
                   />
 
-                  <div className="relative">
-                    <span className="font-display text-4xl font-medium text-rose-gold/40 transition-colors duration-500 group-hover:text-rose-deep/70">
-                      {item.number}
-                    </span>
-
-                    <div className="relative mt-3 mb-3 inline-flex">
-                      <span className="absolute inset-0 rounded-lg bg-rose-deep/50 blur-lg opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                      <div className="relative flex h-10 w-10 items-center justify-center rounded-lg bg-rose-gradient text-white transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(196,111,120,0.55)]">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                    </div>
-
+                  <div className="relative p-5">
                     <h3 className="text-base font-semibold text-ink mb-1.5 tracking-tight">
                       {item.title}
                     </h3>

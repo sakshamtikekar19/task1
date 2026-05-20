@@ -39,6 +39,8 @@ export const services = [
     description:
       'Transform your smile with veneers, bonding, and aesthetic restorations tailored to your facial features.',
     icon: 'Sparkles',
+    image:
+      'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 'root-canal',
@@ -46,6 +48,8 @@ export const services = [
     description:
       'Gentle, precision endodontic care that saves natural teeth while eliminating pain with modern techniques.',
     icon: 'Activity',
+    image:
+      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 'implants',
@@ -53,6 +57,8 @@ export const services = [
     description:
       'Permanent, natural-looking tooth replacements using advanced implant systems for lasting confidence.',
     icon: 'Layers',
+    image:
+      'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 'whitening',
@@ -60,6 +66,8 @@ export const services = [
     description:
       'Professional-grade whitening for a radiant, even smile — safe, fast, and clinically proven results.',
     icon: 'Sun',
+    image:
+      'https://images.unsplash.com/photo-1581585504825-87e64c98aacd?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 'smile-design',
@@ -67,6 +75,8 @@ export const services = [
     description:
       'Digital smile previews and bespoke treatment plans crafted for harmony, proportion, and elegance.',
     icon: 'Smile',
+    image:
+      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80&auto=format&fit=crop',
   },
   {
     id: 'braces',
@@ -74,6 +84,8 @@ export const services = [
     description:
       'Discreet orthodontic solutions including clear aligners for perfectly aligned teeth at any age.',
     icon: 'AlignCenter',
+    image:
+      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80&auto=format&fit=crop',
   },
 ];
 
@@ -83,30 +95,40 @@ export const whyChooseUs = [
     title: 'Advanced Technology',
     description: 'Digital imaging, 3D scanning, and laser-assisted procedures for precision outcomes.',
     icon: 'Cpu',
+    image:
+      'https://images.unsplash.com/photo-1579684385127-1ef15d558a1a?w=800&q=80&auto=format&fit=crop',
   },
   {
     number: '02',
     title: 'Pain-Free Procedures',
     description: 'Comfort-first protocols with gentle anesthesia and anxiety-free treatment experiences.',
     icon: 'HeartPulse',
+    image:
+      'https://images.unsplash.com/photo-1598256989800-fe5f95da3a56?w=800&q=80&auto=format&fit=crop',
   },
   {
     number: '03',
     title: 'Experienced Care',
     description: 'Over 12 years of surgical expertise with thousands of successful patient outcomes.',
     icon: 'GraduationCap',
+    image:
+      'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80&auto=format&fit=crop',
   },
   {
     number: '04',
     title: 'Hygiene & Safety',
     description: 'Hospital-grade sterilization, single-use instruments, and strict infection control standards.',
     icon: 'ShieldCheck',
+    image:
+      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80&auto=format&fit=crop',
   },
   {
     number: '05',
     title: 'Personalized Treatment',
     description: 'Every smile plan is uniquely designed around your goals, lifestyle, and comfort.',
     icon: 'UserCheck',
+    image:
+      'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=800&q=80&auto=format&fit=crop',
   },
 ];
 
@@ -153,45 +175,59 @@ export const testimonials = [
 export const gallery = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80',
+    src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1000&q=80&auto=format&fit=crop',
     alt: 'Modern dental clinic reception',
     caption: 'Luxury Clinic Interior',
     span: 'col-span-2 row-span-2',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=700&q=80&auto=format&fit=crop',
     alt: 'Bright healthy smile',
     caption: 'Smile Transformation',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=700&q=80&auto=format&fit=crop',
     alt: 'Dental treatment in progress',
     caption: 'Precision Care',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1579684385127-1ef15d558a1a?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1579684385127-1ef15d558a1a?w=700&q=80&auto=format&fit=crop',
     alt: 'Advanced dental equipment',
     caption: 'Advanced Technology',
     span: 'col-span-1 row-span-2',
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=700&q=80&auto=format&fit=crop',
     alt: 'Patient consultation',
     caption: 'Personal Consultation',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1598256989800-fe5f95da3a56?w=800&q=80',
+    src: 'https://images.unsplash.com/photo-1598256989800-fe5f95da3a56?w=1000&q=80&auto=format&fit=crop',
     alt: 'Dental team at work',
     caption: 'Expert Team',
     span: 'col-span-2 row-span-1',
+  },
+  {
+    id: 7,
+    src: 'https://images.unsplash.com/photo-1581585504825-87e64c98aacd?w=700&q=80&auto=format&fit=crop',
+    alt: 'Radiant healthy smile close-up',
+    caption: 'Whitening Results',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    id: 8,
+    src: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=80&auto=format&fit=crop',
+    alt: 'Clear aligners detail',
+    caption: 'Clear Aligners',
+    span: 'col-span-1 row-span-1',
   },
 ];
 
@@ -219,6 +255,8 @@ export const processSteps = [
     description:
       'Share your goals through our online form or a quick call. We respond within 24 hours.',
     icon: 'CalendarCheck',
+    image:
+      'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&q=80&auto=format&fit=crop',
   },
   {
     number: '02',
@@ -226,6 +264,8 @@ export const processSteps = [
     description:
       'Digital scans, X-rays, and a one-on-one discussion to map your unique smile blueprint.',
     icon: 'Stethoscope',
+    image:
+      'https://images.unsplash.com/photo-1579684385127-1ef15d558a1a?w=600&q=80&auto=format&fit=crop',
   },
   {
     number: '03',
@@ -233,6 +273,8 @@ export const processSteps = [
     description:
       'A transparent plan with timelines, options, and pricing — designed entirely around you.',
     icon: 'ClipboardList',
+    image:
+      'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80&auto=format&fit=crop',
   },
   {
     number: '04',
@@ -240,6 +282,8 @@ export const processSteps = [
     description:
       'Comfortable, painless treatments delivered with precision — followed by lifetime care.',
     icon: 'Smile',
+    image:
+      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80&auto=format&fit=crop',
   },
 ];
 

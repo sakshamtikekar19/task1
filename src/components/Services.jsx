@@ -81,7 +81,19 @@ export default function Services() {
                       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="px-4 pb-4 pt-1 pl-[4.75rem]">
+                      <div className="px-4 pb-4 pt-1">
+                        {service.image && (
+                          <div className="relative aspect-[16/10] mb-3 overflow-hidden rounded-xl">
+                            <img
+                              src={service.image}
+                              alt={service.title}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-rose-wine/30 to-transparent" />
+                          </div>
+                        )}
                         <p className="text-sm text-ink/70 leading-relaxed mb-4">
                           {service.description}
                         </p>
@@ -131,12 +143,25 @@ export default function Services() {
                   />
 
                   <div className="relative">
-                    <div className="relative inline-flex mb-4">
-                      <span className="absolute inset-0 rounded-xl bg-rose-gradient opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60" />
-                      <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-rose-blush/50 text-rose-deep transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-rose-gradient group-hover:text-white group-hover:-rotate-6 group-hover:scale-110 group-hover:shadow-luxe">
-                        <Icon className="w-5 h-5 transition-transform duration-500 group-hover:scale-110" />
+                    {service.image && (
+                      <div className="relative -mx-1 -mt-1 mb-4 aspect-[16/10] overflow-hidden rounded-xl">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
+                          loading="lazy"
+                          decoding="async"
+                          width={800}
+                          height={500}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-rose-wine/55 via-rose-wine/10 to-transparent" />
+                        <div className="absolute bottom-2 left-2 right-2 flex items-end justify-between">
+                          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/95 text-rose-deep shadow-luxe backdrop-blur-sm transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+                            <Icon className="w-4 h-4" />
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     <h3 className="text-base font-semibold text-ink mb-1.5 tracking-tight">
                       {service.title}

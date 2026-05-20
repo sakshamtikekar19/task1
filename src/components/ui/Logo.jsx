@@ -1,3 +1,5 @@
+const LOGO_SRC = `${import.meta.env.BASE_URL}logo.png`;
+
 export default function Logo({
   size = 'md',
   showName = false,
@@ -17,7 +19,7 @@ export default function Logo({
 
   const img = (
     <img
-      src="/logo.png"
+      src={LOGO_SRC}
       alt="Dr. Ritham Debnath logo"
       className={`${sizes[size]} object-contain shrink-0`}
       loading="eager"
