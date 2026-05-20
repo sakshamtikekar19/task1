@@ -168,7 +168,7 @@ export default function Hero() {
               </motion.div>
 
               <motion.a
-                href="#gallery"
+                href="/gallery"
                 className="absolute right-6 bottom-6 group flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 aria-label="View clinic gallery"

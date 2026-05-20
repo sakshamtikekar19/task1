@@ -1,8 +1,24 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { brand, footerLinks, socialLinks } from '../data/content';
 import { getIcon } from '../utils/icons';
 
 const LOGO_SRC = `${import.meta.env.BASE_URL}logo.png`;
+
+function FooterLink({ link, className }) {
+  if (link.kind === 'route') {
+    return (
+      <Link to={link.to} className={className}>
+        {link.label}
+      </Link>
+    );
+  }
+  return (
+    <a href={link.to} className={className}>
+      {link.label}
+    </a>
+  );
+}
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -64,13 +80,11 @@ export default function Footer() {
             </h3>
             <ul className="space-y-1.5">
               {footerLinks.quick.map((link) => (
-                <li key={link.href + link.label}>
-                  <a
-                    href={link.href}
+                <li key={link.label}>
+                  <FooterLink
+                    link={link}
                     className="text-[13px] text-ink/65 hover:text-rose-deep transition-colors"
-                  >
-                    {link.label}
-                  </a>
+                  />
                 </li>
               ))}
             </ul>
@@ -83,12 +97,10 @@ export default function Footer() {
             <ul className="space-y-1.5">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <FooterLink
+                    link={link}
                     className="text-[13px] text-ink/65 hover:text-rose-deep transition-colors"
-                  >
-                    {link.label}
-                  </a>
+                  />
                 </li>
               ))}
             </ul>

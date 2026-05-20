@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { brand, navLinks } from '../data/content';
 import GradientButton from './ui/GradientButton';
 import Logo from './ui/Logo';
@@ -9,6 +10,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     return scrollY.on('change', (y) => setScrolled(y > 40));
@@ -31,6 +34,20 @@ export default function Navbar() {
 
   const closeMenu = () => setOpen(false);
 
+  const handleAnchor = (e, hash) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.history.replaceState(null, '', `/${hash}`);
+      closeMenu();
+    } else {
+      e.preventDefault();
+      navigate(`/${hash}`);
+      closeMenu();
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
       <motion.nav
@@ -42,17 +59,18 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="flex items-center justify-between gap-3 sm:gap-4">
-          <a
-            href="#hero"
-            aria-label="Dr. Ritham Debnath — back to top"
+          <Link
+            to="/"
+            aria-label="Dr. Ritham Debnath — back to home"
             className="flex items-center group py-1"
+            onClick={closeMenu}
           >
             <Logo size="xs" showName className="gap-3.5" />
-          </a>
+          </Link>
 
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="hidden sm:block">
-              <GradientButton href="#contact" variant="primary">
+              <GradientButton href="/#contact" variant="primary">
                 Book Appointment
               </GradientButton>
             </div>
@@ -118,40 +136,67 @@ export default function Navbar() {
               <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-rose-deep mb-3">
                 Menu
               </p>
-              <ul className="flex flex-col gap-1">
-                {navLinks.map((link, i) => (
-                  <motion.li
-                    key={link.href}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.05 + i * 0.035, duration: 0.25 }}
-                  >
-                    <a
-                      href={link.href}
-                      className="flex items-center justify-between py-3 px-4 rounded-xl text-base font-medium text-ink hover:bg-rose-blush/40 hover:text-rose-deep transition-colors"
-                      onClick={closeMenu}
-                    >
-                      <span>{link.label}</span>
-                      <span
-                        aria-hidden
-                        className="font-script text-rose-deep/40 text-lg"
+              <ul className="flex flex-col gap-0.5">
+                {navLinks.map((link, i) => {
+                  const isAnchor = link.kind === 'anchor';
+                  const counter = String(i + 1).padStart(2, '0');
+
+                  if (isAnchor) {
+                    const hash = link.to.split('#')[1];
+                    return (
+                      <motion.li
+                        key={link.label}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.05 + i * 0.03, duration: 0.22 }}
                       >
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                    </a>
-                  </motion.li>
-                ))}
+                        <a
+                          href={`#${hash}`}
+                          onClick={(e) => handleAnchor(e, `#${hash}`)}
+                          className="flex items-center justify-between py-2.5 px-4 rounded-xl text-[15px] font-medium text-ink hover:bg-rose-blush/40 hover:text-rose-deep transition-colors"
+                        >
+                          <span>{link.label}</span>
+                          <span aria-hidden className="font-script text-rose-deep/40 text-lg">
+                            {counter}
+                          </span>
+                        </a>
+                      </motion.li>
+                    );
+                  }
+                  return (
+                    <motion.li
+                      key={link.label}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.05 + i * 0.03, duration: 0.22 }}
+                    >
+                      <Link
+                        to={link.to}
+                        onClick={closeMenu}
+                        className="flex items-center justify-between py-2.5 px-4 rounded-xl text-[15px] font-medium text-ink hover:bg-rose-blush/40 hover:text-rose-deep transition-colors"
+                      >
+                        <span>{link.label}</span>
+                        <span aria-hidden className="font-script text-rose-deep/40 text-lg">
+                          {counter}
+                        </span>
+                      </Link>
+                    </motion.li>
+                  );
+                })}
               </ul>
 
-              <div className="mt-5 pt-5 border-t border-rose-gold/30 space-y-3">
-                <GradientButton
-                  href="#contact"
-                  variant="primary"
-                  className="w-full"
+              <div className="mt-4 pt-4 border-t border-rose-gold/30 space-y-3">
+                <a
+                  href="/#contact"
                   onClick={closeMenu}
+                  className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] rounded-full text-sm font-semibold transition-all duration-300 overflow-hidden w-full bg-rose-gradient text-white shadow-luxe hover:shadow-[0_30px_60px_-15px_rgba(196,111,120,0.45)]"
                 >
-                  Book Appointment
-                </GradientButton>
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-[900ms] ease-out bg-gradient-to-r from-transparent via-white/35 to-transparent skew-x-[-20deg]"
+                  />
+                  <span className="relative z-10">Book Appointment</span>
+                </a>
                 <div className="grid grid-cols-2 gap-2 text-[11px]">
                   <a
                     href={brand.phoneHref}

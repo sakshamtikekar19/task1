@@ -23,14 +23,18 @@ export const brand = {
   },
 };
 
+// Hash anchors live on the landing page; routes open dedicated pages.
 export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Process', href: '#process' },
-  { label: 'Why Us', href: '#why-us' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', to: '/', kind: 'route' },
+  { label: 'About', to: '/#about', kind: 'anchor' },
+  { label: 'Services', to: '/#services', kind: 'anchor' },
+  { label: 'Process', to: '/#process', kind: 'anchor' },
+  { label: 'Contact', to: '/#contact', kind: 'anchor' },
+  { label: 'Why Us', to: '/why-us', kind: 'route' },
+  { label: 'Gallery', to: '/gallery', kind: 'route' },
+  { label: 'Testimonials', to: '/testimonials', kind: 'route' },
+  { label: 'FAQ', to: '/faq', kind: 'route' },
+  { label: 'Visit the Clinic', to: '/location', kind: 'route' },
 ];
 
 export const services = [
@@ -314,15 +318,18 @@ export const serviceOptions = services.map((s) => s.title);
 
 export const footerLinks = {
   quick: [
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Why Us', href: '#why-us' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Book Appointment', href: '#contact' },
+    { label: 'Home', to: '/', kind: 'route' },
+    { label: 'About', to: '/#about', kind: 'anchor' },
+    { label: 'Services', to: '/#services', kind: 'anchor' },
+    { label: 'Process', to: '/#process', kind: 'anchor' },
+    { label: 'Book Appointment', to: '/#contact', kind: 'anchor' },
+    { label: 'Why Us', to: '/why-us', kind: 'route' },
+    { label: 'Testimonials', to: '/testimonials', kind: 'route' },
+    { label: 'Gallery', to: '/gallery', kind: 'route' },
+    { label: 'FAQ', to: '/faq', kind: 'route' },
+    { label: 'Visit the Clinic', to: '/location', kind: 'route' },
   ],
-  services: services.map((s) => ({ label: s.title, href: '#services' })),
+  services: services.map((s) => ({ label: s.title, to: '/#services', kind: 'anchor' })),
 };
 
 const PHONE_DIGITS = PHONE_RAW.replace('+', '');
