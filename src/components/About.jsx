@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer, viewportOnce } from '../utils/motion';
 
 export default function About() {
   return (
-    <section id="about" className="py-14 md:py-20" aria-labelledby="about-heading">
+    <section id="about" className="py-12 md:py-16" aria-labelledby="about-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-hidden lg:overflow-visible">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div
@@ -44,6 +44,7 @@ export default function About() {
 
           <div>
             <SectionHeading
+              id="about-heading"
               eyebrow="About"
               title="Meet"
               scriptAccent="Dr. Ritham Debnath"

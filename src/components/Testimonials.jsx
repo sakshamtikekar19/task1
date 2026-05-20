@@ -24,11 +24,12 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-14 md:py-20 bg-white/40"
+      className="py-12 md:py-16 bg-white/40"
       aria-labelledby="testimonials-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          id="testimonials-heading"
           eyebrow="Testimonials"
           title="Stories From Our"
           scriptAccent="Patients"

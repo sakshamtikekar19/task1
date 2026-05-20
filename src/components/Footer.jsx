@@ -46,6 +46,9 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
+                    title={social.label}
+                    target={social.external ? '_blank' : undefined}
+                    rel={social.external ? 'noreferrer noopener' : undefined}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-blush/50 text-rose-deep hover:bg-rose-gradient hover:text-white transition-colors"
                   >
                     <Icon className="w-3.5 h-3.5" />

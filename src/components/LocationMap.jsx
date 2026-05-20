@@ -4,9 +4,10 @@ import { brand } from '../data/content';
 
 export default function LocationMap() {
   return (
-    <section id="location" className="py-10 md:py-14" aria-labelledby="location-heading">
+    <section id="location" className="py-12 md:py-16" aria-labelledby="location-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          id="location-heading"
           eyebrow="Visit Us"
           title="Find the"
           scriptAccent="Clinic"

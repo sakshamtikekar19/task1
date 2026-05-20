@@ -6,9 +6,10 @@ import { fadeUp, staggerContainer, viewportOnce, hoverLift } from '../utils/moti
 
 export default function Process() {
   return (
-    <section id="process" className="py-14 md:py-20" aria-labelledby="process-heading">
+    <section id="process" className="py-12 md:py-16" aria-labelledby="process-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          id="process-heading"
           eyebrow="How It Works"
           title="Your Journey to a"
           scriptAccent="Brighter Smile"

@@ -9,11 +9,12 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="py-10 md:py-14"
+      className="py-12 md:py-16"
       aria-labelledby="why-us-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          id="why-us-heading"
           eyebrow="Why Choose Us"
           title="The Standard of"
           scriptAccent="Premium Care"

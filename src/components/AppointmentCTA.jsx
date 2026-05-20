@@ -30,7 +30,7 @@ export default function AppointmentCTA() {
   };
 
   return (
-    <section id="contact" className="py-14 md:py-20" aria-labelledby="contact-heading">
+    <section id="contact" className="py-12 md:py-16" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="relative overflow-hidden rounded-4xl bg-rose-gradient p-7 sm:p-10 lg:p-14 shadow-luxe"

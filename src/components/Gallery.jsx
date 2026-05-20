@@ -5,9 +5,10 @@ import { fadeUp, staggerContainer, viewportOnce } from '../utils/motion';
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-14 md:py-20" aria-labelledby="gallery-heading">
+    <section id="gallery" className="py-12 md:py-16" aria-labelledby="gallery-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          id="gallery-heading"
           eyebrow="Gallery"
           title="Our Clinic &"
           scriptAccent="Smiles"

@@ -13,11 +13,12 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-14 md:py-20 bg-white/40"
+      className="py-12 md:py-16 bg-white/40"
       aria-labelledby="services-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          id="services-heading"
           eyebrow="Our Services"
           title="Comprehensive Dental"
           scriptAccent="Excellence"

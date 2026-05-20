@@ -32,7 +32,11 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="flex items-center justify-between gap-4">
-          <a href="#" className="flex items-center group py-1">
+          <a
+            href="#hero"
+            aria-label="Dr. Ritham Debnath — back to top"
+            className="flex items-center group py-1"
+          >
             <Logo size="xs" showName className="gap-3.5" />
           </a>
 

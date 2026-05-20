@@ -167,10 +167,11 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              <motion.button
+              <motion.a
+                href="#gallery"
                 className="absolute right-6 bottom-6 group flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
-                aria-label="Watch clinic tour"
+                aria-label="View clinic gallery"
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-rose-deep shadow-luxe group-hover:bg-rose-deep group-hover:text-white transition-colors">
                   <Play className="w-5 h-5 ml-0.5 fill-current" />
@@ -178,7 +179,7 @@ export default function Hero() {
                 <span className="hidden sm:block text-xs font-semibold uppercase tracking-[0.25em] text-white drop-shadow-md">
                   Clinic Tour
                 </span>
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         </div>

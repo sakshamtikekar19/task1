@@ -300,9 +300,29 @@ export const footerLinks = {
   services: services.map((s) => ({ label: s.title, href: '#services' })),
 };
 
+const PHONE_DIGITS = PHONE_RAW.replace('+', '');
+
 export const socialLinks = [
-  { label: 'Instagram', icon: 'Instagram', href: '#' },
-  { label: 'Facebook', icon: 'Facebook', href: '#' },
-  { label: 'Twitter', icon: 'Twitter', href: '#' },
-  { label: 'Youtube', icon: 'Youtube', href: '#' },
+  {
+    label: 'Chat on WhatsApp',
+    icon: 'MessageCircle',
+    href: `https://wa.me/${PHONE_DIGITS}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`,
+    external: true,
+  },
+  {
+    label: 'Call the clinic',
+    icon: 'Phone',
+    href: `tel:${PHONE_RAW}`,
+  },
+  {
+    label: 'Email Dr. Debnath',
+    icon: 'Mail',
+    href: 'mailto:rhitam.debnath95@gmail.com',
+  },
+  {
+    label: 'Find us on Google Maps',
+    icon: 'Globe',
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`,
+    external: true,
+  },
 ];

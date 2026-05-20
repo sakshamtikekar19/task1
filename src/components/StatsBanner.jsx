@@ -9,7 +9,7 @@ const wineBg = {
 
 export default function StatsBanner() {
   return (
-    <section aria-label="Clinic by the numbers" className="py-10 md:py-14">
+    <section aria-label="Clinic by the numbers" className="py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="relative overflow-hidden rounded-4xl p-8 sm:p-12 lg:p-16 shadow-deep [isolation:isolate]"

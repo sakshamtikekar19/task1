@@ -20,6 +20,8 @@ import {
   PlayCircle,
   CalendarCheck,
   ClipboardList,
+  Phone,
+  Mail,
 } from 'lucide-react';
 
 const iconMap = {
@@ -38,16 +40,14 @@ const iconMap = {
   Users,
   Stethoscope,
   BadgeCheck,
-  Instagram: Share2,
-  Facebook: Globe,
-  Twitter: MessageCircle,
-  Youtube: PlayCircle,
   Share2,
   Globe,
   MessageCircle,
   PlayCircle,
   CalendarCheck,
   ClipboardList,
+  Phone,
+  Mail,
 };
 
 export function getIcon(name) {

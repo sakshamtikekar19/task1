@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { fadeUp, viewportOnce } from '../../utils/motion';
 
 export default function SectionHeading({
+  id,
   eyebrow,
   title,
   scriptAccent,
@@ -36,6 +37,7 @@ export default function SectionHeading({
         </span>
       )}
       <h2
+        id={id}
         className={`font-display text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.15] ${
           light ? 'text-white' : 'text-ink'
         }`}
