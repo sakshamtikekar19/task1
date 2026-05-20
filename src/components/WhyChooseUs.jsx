@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="py-14 md:py-20"
+      className="py-10 md:py-14"
       aria-labelledby="why-us-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
         />
 
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"

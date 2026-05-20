@@ -122,14 +122,6 @@ export const whyChooseUs = [
     image:
       'https://images.pexels.com/photos/3762456/pexels-photo-3762456.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
-  {
-    number: '05',
-    title: 'Personalized Treatment',
-    description: 'Every smile plan is uniquely designed around your goals, lifestyle, and comfort.',
-    icon: 'UserCheck',
-    image:
-      'https://images.pexels.com/photos/2774067/pexels-photo-2774067.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
 ];
 
 export const stats = [
