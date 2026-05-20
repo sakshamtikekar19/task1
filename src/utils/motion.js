@@ -1,7 +1,7 @@
 export const easePremium = [0.22, 1, 0.36, 1];
 
 export const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 18 },
   show: {
     opacity: 1,
     y: 0,
@@ -20,14 +20,15 @@ export const fadeIn = {
 export const staggerContainer = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.09, delayChildren: 0.05 },
   },
 };
 
-export const viewportOnce = { once: false, margin: '-80px', amount: 0.15 };
+// Calm: animation plays once when scrolled into view, then stays.
+export const viewportOnce = { once: true, margin: '-60px', amount: 0.15 };
 
 export const fadeDown = {
-  hidden: { opacity: 0, y: -25 },
+  hidden: { opacity: 0, y: -16 },
   show: {
     opacity: 1,
     y: 0,
@@ -36,16 +37,15 @@ export const fadeDown = {
 };
 
 export const scaleIn = {
-  hidden: { opacity: 0, scale: 0.92 },
+  hidden: { opacity: 0, scale: 0.96 },
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.65, ease: easePremium },
+    transition: { duration: 0.6, ease: easePremium },
   },
 };
 
 export const hoverLift = {
-  y: -6,
-  scale: 1.02,
-  transition: { duration: 0.3, ease: easePremium },
+  y: -3,
+  transition: { duration: 0.4, ease: easePremium },
 };

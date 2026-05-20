@@ -126,17 +126,17 @@ export default function Navbar() {
               role="dialog"
               aria-modal="true"
               aria-label="Site navigation"
-              className="absolute top-20 right-4 sm:right-6 lg:right-8 w-[calc(100%-2rem)] sm:w-[420px] glass-strong rounded-2.5xl p-6 shadow-luxe"
+              className="absolute top-20 right-4 sm:right-6 lg:right-8 w-[calc(100%-2rem)] sm:w-[400px] glass-strong rounded-3xl p-7 shadow-soft"
               initial={{ opacity: 0, y: -16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -16, scale: 0.98 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-rose-deep mb-3">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-rose-deep mb-5">
                 Menu
               </p>
-              <ul className="flex flex-col gap-0.5">
+              <ul className="flex flex-col">
                 {navLinks.map((link, i) => {
                   const isAnchor = link.kind === 'anchor';
                   const counter = String(i + 1).padStart(2, '0');
@@ -153,10 +153,13 @@ export default function Navbar() {
                         <a
                           href={`#${hash}`}
                           onClick={(e) => handleAnchor(e, `#${hash}`)}
-                          className="flex items-center justify-between py-2.5 px-4 rounded-xl text-[15px] font-medium text-ink hover:bg-rose-blush/40 hover:text-rose-deep transition-colors"
+                          className="group flex items-baseline justify-between py-3.5 border-b border-rose-soft/30 text-[18px] font-display text-ink hover:text-rose-deep transition-colors tracking-tight"
                         >
                           <span>{link.label}</span>
-                          <span aria-hidden className="font-script text-rose-deep/40 text-lg">
+                          <span
+                            aria-hidden
+                            className="text-[10px] text-ink-soft tracking-[0.2em] font-sans opacity-60 group-hover:opacity-100 group-hover:text-rose-deep transition-opacity"
+                          >
                             {counter}
                           </span>
                         </a>
@@ -173,10 +176,13 @@ export default function Navbar() {
                       <Link
                         to={link.to}
                         onClick={closeMenu}
-                        className="flex items-center justify-between py-2.5 px-4 rounded-xl text-[15px] font-medium text-ink hover:bg-rose-blush/40 hover:text-rose-deep transition-colors"
+                        className="group flex items-baseline justify-between py-3.5 border-b border-rose-soft/30 text-[18px] font-display text-ink hover:text-rose-deep transition-colors tracking-tight"
                       >
                         <span>{link.label}</span>
-                        <span aria-hidden className="font-script text-rose-deep/40 text-lg">
+                        <span
+                          aria-hidden
+                          className="text-[10px] text-ink-soft tracking-[0.2em] font-sans opacity-60 group-hover:opacity-100 group-hover:text-rose-deep transition-opacity"
+                        >
                           {counter}
                         </span>
                       </Link>
@@ -185,34 +191,30 @@ export default function Navbar() {
                 })}
               </ul>
 
-              <div className="mt-4 pt-4 border-t border-rose-gold/30 space-y-3">
+              <div className="mt-7 space-y-3">
                 <a
                   href="/#contact"
                   onClick={closeMenu}
-                  className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] rounded-full text-sm font-semibold transition-all duration-300 overflow-hidden w-full bg-rose-gradient text-white shadow-luxe hover:shadow-[0_30px_60px_-15px_rgba(196,111,120,0.45)]"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] rounded-full text-xs font-semibold tracking-wider w-full bg-ink text-white transition-colors hover:bg-rose-deep"
                 >
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-[900ms] ease-out bg-gradient-to-r from-transparent via-white/35 to-transparent skew-x-[-20deg]"
-                  />
-                  <span className="relative z-10">Book Appointment</span>
+                  Book Appointment
                 </a>
                 <div className="grid grid-cols-2 gap-2 text-[11px]">
                   <a
                     href={brand.phoneHref}
                     onClick={closeMenu}
-                    className="text-center py-2 rounded-full bg-rose-blush/50 text-rose-deep font-semibold hover:bg-rose-blush"
+                    className="text-center py-2.5 rounded-full border border-rose-soft text-rose-deep font-semibold tracking-wider hover:bg-rose-blush/50 transition-colors"
                   >
-                    Call
+                    CALL
                   </a>
                   <a
                     href={brand.whatsappHref}
                     target="_blank"
                     rel="noreferrer noopener"
                     onClick={closeMenu}
-                    className="text-center py-2 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#1ebe57]"
+                    className="text-center py-2.5 rounded-full bg-[#25D366] text-white font-semibold tracking-wider hover:bg-[#1ebe57] transition-colors"
                   >
-                    WhatsApp
+                    WHATSAPP
                   </a>
                 </div>
               </div>

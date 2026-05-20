@@ -19,45 +19,44 @@ export default function SectionHeading({
 
   return (
     <motion.div
-      className={`max-w-2xl mb-9 md:mb-12 ${alignClass}`}
+      className={`max-w-2xl mb-12 md:mb-16 ${alignClass}`}
       initial="hidden"
       whileInView="show"
       viewport={viewportOnce}
       variants={fadeUp}
     >
       {eyebrow && (
-        <span
-          className={`inline-block mb-4 px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.3em] uppercase ${
-            light
-              ? 'bg-white/20 text-white'
-              : 'bg-rose-blush/60 text-rose-deep'
+        <p
+          className={`text-[10px] font-semibold tracking-[0.35em] uppercase mb-4 ${
+            light ? 'text-rose-blush' : 'text-rose-deep'
           }`}
         >
           {eyebrow}
-        </span>
+        </p>
       )}
       <h2
         id={id}
-        className={`font-display text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.15] ${
+        className={`font-display text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.1] tracking-tightest ${
           light ? 'text-white' : 'text-ink'
         }`}
       >
         {title}
         {scriptAccent && (
           <span
-            className={`block font-script text-4xl sm:text-5xl lg:text-6xl mt-2 ${
+            className={`italic font-light ${
               light ? 'text-rose-blush' : 'text-rose-deep'
             }`}
           >
-            {scriptAccent}
+            {' '}
+            {scriptAccent}.
           </span>
         )}
       </h2>
       {subtitle && (
         <p
-          className={`mt-4 text-base sm:text-lg leading-relaxed ${
-            light ? 'text-white/85' : 'text-ink/70'
-          }`}
+          className={`mt-5 text-base sm:text-[17px] leading-[1.7] ${
+            light ? 'text-white/80' : 'text-ink-soft'
+          } ${align === 'center' ? 'max-w-xl mx-auto' : 'max-w-xl'}`}
         >
           {subtitle}
         </p>

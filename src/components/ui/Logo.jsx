@@ -57,15 +57,15 @@ export default function Logo({
       {showName && (
         <div className="leading-tight">
           <p
-            className={`font-script text-lg sm:text-xl ${
-              light ? 'text-rose-blush' : 'text-rose-deep'
+            className={`font-display text-[15px] sm:text-base font-medium tracking-tight ${
+              light ? 'text-white' : 'text-ink'
             }`}
           >
             Dr. Ritham Debnath
           </p>
           <p
-            className={`text-[9px] sm:text-[10px] tracking-[0.3em] uppercase mt-1 ${
-              light ? 'text-white/55' : 'text-ink/50'
+            className={`text-[9px] tracking-[0.28em] uppercase mt-1 ${
+              light ? 'text-white/60' : 'text-ink-soft'
             }`}
           >
             Consultant Dental Surgeon

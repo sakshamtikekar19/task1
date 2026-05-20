@@ -29,127 +29,114 @@ export default function AppointmentCTA() {
     setTimeout(() => setSubmitted(false), 5000);
   };
 
+  const inputClass =
+    'mt-2 w-full px-4 py-3 rounded-xl border border-rose-soft/60 bg-white/90 text-ink placeholder:text-ink-soft/60 text-sm focus:outline-none focus:ring-2 focus:ring-rose-deep/20 focus:border-rose-deep transition';
+
+  const labelClass =
+    'block text-[10px] font-semibold text-ink-soft uppercase tracking-[0.18em]';
+
   return (
-    <section id="contact" className="py-12 md:py-16" aria-labelledby="contact-heading">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="py-24 md:py-32"
+      aria-labelledby="contact-heading"
+    >
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <motion.div
-          className="relative overflow-hidden rounded-4xl bg-rose-gradient p-7 sm:p-10 lg:p-14 shadow-luxe"
+          className="relative overflow-hidden rounded-[2rem] bg-rose-blush/60 p-8 sm:p-12 lg:p-16"
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
           variants={fadeUp}
         >
-          <svg
-            className="absolute top-0 right-0 w-64 h-64 text-white/10"
-            viewBox="0 0 200 200"
-            aria-hidden
-          >
-            <path
-              fill="currentColor"
-              d="M100 20 C140 60 180 80 160 120 C140 160 100 180 60 160 C20 140 20 80 60 40 Z"
-            />
-          </svg>
-          <svg
-            className="absolute bottom-0 left-0 w-48 h-48 text-white/10 rotate-180"
-            viewBox="0 0 200 200"
-            aria-hidden
-          >
-            <path
-              fill="currentColor"
-              d="M100 30 Q150 80 120 140 Q80 180 40 120 Q10 60 100 30 Z"
-            />
-          </svg>
-
-          <div className="relative grid lg:grid-cols-2 gap-10 lg:gap-14">
-            <div>
-              <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/20 text-white text-xs font-semibold tracking-widest uppercase">
-                Book Now
-              </span>
+          <div className="relative grid lg:grid-cols-12 gap-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <p className="text-[10px] font-semibold tracking-[0.35em] uppercase text-rose-deep mb-4">
+                Book a visit
+              </p>
               <h2
                 id="contact-heading"
-                className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-[1.15]"
+                className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-ink leading-[1.1] tracking-tightest"
               >
-                Begin Your Smile
-                <span className="block font-script text-4xl sm:text-5xl lg:text-6xl text-rose-blush mt-2">
-                  Journey Today
+                Begin your smile
+                <span className="block italic font-light text-rose-deep">
+                  journey today.
                 </span>
               </h2>
-              <p className="mt-4 text-white/85 leading-relaxed max-w-md">
-                Schedule a consultation and discover personalized treatment plans designed
-                exclusively for you. Our team responds within 24 hours.
+              <p className="mt-5 text-ink-soft leading-[1.75] max-w-md">
+                Schedule a consultation and discover a treatment plan designed
+                around you. Our team responds within 24 hours.
               </p>
 
-              <ul className="mt-8 space-y-4">
-                <li className="flex items-start gap-3 text-white/90">
-                  <Clock className="w-5 h-5 mt-0.5 shrink-0" />
-                  <div>
+              <ul className="mt-10 space-y-5 text-ink">
+                <li className="flex items-start gap-4">
+                  <Clock className="w-4 h-4 mt-1 text-rose-deep shrink-0" />
+                  <div className="text-sm leading-relaxed">
                     <p className="font-medium">{brand.hours.weekdays}</p>
-                    <p className="text-sm text-white/75">{brand.hours.sunday}</p>
+                    <p className="text-ink-soft mt-0.5">{brand.hours.sunday}</p>
                   </div>
                 </li>
-                <li className="flex items-center gap-3 text-white/90">
-                  <Phone className="w-5 h-5 shrink-0" />
+                <li className="flex items-center gap-4">
+                  <Phone className="w-4 h-4 text-rose-deep shrink-0" />
                   <a
                     href={brand.phoneHref}
-                    className="font-medium hover:underline"
+                    className="text-sm font-medium hover:text-rose-deep transition-colors"
                   >
                     {brand.phone}
                   </a>
                 </li>
-                <li className="flex items-start gap-3 text-white/90">
-                  <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
+                <li className="flex items-start gap-4">
+                  <MapPin className="w-4 h-4 mt-1 text-rose-deep shrink-0" />
                   <a
                     href={brand.mapDirections}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="hover:underline"
+                    className="text-sm leading-relaxed hover:text-rose-deep transition-colors"
                   >
                     {brand.address}
                   </a>
                 </li>
               </ul>
 
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={brand.phoneHref}
-                  className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-full bg-white text-rose-deep text-sm font-semibold shadow-luxe transition-all hover:scale-[1.03] hover:bg-cream"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[42px] rounded-full bg-ink text-white text-xs font-semibold tracking-wider transition-colors hover:bg-rose-deep"
                 >
-                  <Phone className="w-4 h-4" />
-                  Call Now
+                  <Phone className="w-3.5 h-3.5" />
+                  Call now
                 </a>
                 <a
                   href={brand.whatsappHref}
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Chat on WhatsApp"
-                  className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-full bg-[#25D366] text-white text-sm font-semibold shadow-luxe transition-all hover:scale-[1.03] hover:bg-[#1ebe57]"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[42px] rounded-full bg-[#25D366] text-white text-xs font-semibold tracking-wider transition-colors hover:bg-[#1ebe57]"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-3.5 h-3.5" />
                   WhatsApp
                 </a>
                 <a
                   href={brand.mapDirections}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-full bg-white/15 text-white text-sm font-semibold backdrop-blur-sm border border-white/25 transition-all hover:scale-[1.03] hover:bg-white/25"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[42px] rounded-full border border-ink/15 text-ink text-xs font-semibold tracking-wider transition-colors hover:border-rose-deep hover:text-rose-deep"
                 >
-                  <Navigation className="w-4 h-4" />
+                  <Navigation className="w-3.5 h-3.5" />
                   Directions
                 </a>
               </div>
             </div>
 
-            <div className="relative">
+            <div className="lg:col-span-7 relative">
               <form
                 onSubmit={handleSubmit}
-                className="glass rounded-2.5xl p-6 sm:p-8 space-y-4"
+                className="bg-white/90 backdrop-blur-md rounded-3xl p-7 sm:p-9 space-y-5 shadow-glass"
                 noValidate
               >
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-5">
                   <label className="block">
-                    <span className="text-xs font-semibold text-ink/70 uppercase tracking-wider">
-                      Full Name
-                    </span>
+                    <span className={labelClass}>Full Name</span>
                     <input
                       type="text"
                       name="name"
@@ -157,13 +144,11 @@ export default function AppointmentCTA() {
                       onChange={handleChange}
                       required
                       placeholder="Your name"
-                      className="mt-1.5 w-full px-4 py-3 rounded-xl border border-rose-gold/40 bg-white/80 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-rose-deep/30 focus:border-rose-deep transition"
+                      className={inputClass}
                     />
                   </label>
                   <label className="block">
-                    <span className="text-xs font-semibold text-ink/70 uppercase tracking-wider">
-                      Phone
-                    </span>
+                    <span className={labelClass}>Phone</span>
                     <input
                       type="tel"
                       name="phone"
@@ -171,60 +156,59 @@ export default function AppointmentCTA() {
                       onChange={handleChange}
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="mt-1.5 w-full px-4 py-3 rounded-xl border border-rose-gold/40 bg-white/80 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-rose-deep/30 focus:border-rose-deep transition"
+                      className={inputClass}
+                    />
+                  </label>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <label className="block">
+                    <span className={labelClass}>Service</span>
+                    <select
+                      name="service"
+                      value={form.service}
+                      onChange={handleChange}
+                      required
+                      className={inputClass}
+                    >
+                      <option value="">Select a service</option>
+                      {serviceOptions.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="block">
+                    <span className={labelClass}>Preferred Date</span>
+                    <input
+                      type="date"
+                      name="date"
+                      value={form.date}
+                      onChange={handleChange}
+                      required
+                      className={inputClass}
                     />
                   </label>
                 </div>
 
                 <label className="block">
-                  <span className="text-xs font-semibold text-ink/70 uppercase tracking-wider">
-                    Service
-                  </span>
-                  <select
-                    name="service"
-                    value={form.service}
-                    onChange={handleChange}
-                    required
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl border border-rose-gold/40 bg-white/80 text-ink focus:outline-none focus:ring-2 focus:ring-rose-deep/30 focus:border-rose-deep transition"
-                  >
-                    <option value="">Select a service</option>
-                    {serviceOptions.map((opt) => (
-                      <option key={opt} value={opt}>
-                        {opt}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="text-xs font-semibold text-ink/70 uppercase tracking-wider">
-                    Preferred Date
-                  </span>
-                  <input
-                    type="date"
-                    name="date"
-                    value={form.date}
-                    onChange={handleChange}
-                    required
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl border border-rose-gold/40 bg-white/80 text-ink focus:outline-none focus:ring-2 focus:ring-rose-deep/30 focus:border-rose-deep transition"
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="text-xs font-semibold text-ink/70 uppercase tracking-wider">
-                    Message
-                  </span>
+                  <span className={labelClass}>Message</span>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
                     rows={3}
                     placeholder="Tell us about your concerns..."
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl border border-rose-gold/40 bg-white/80 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-rose-deep/30 focus:border-rose-deep transition resize-none"
+                    className={`${inputClass} resize-none`}
                   />
                 </label>
 
-                <GradientButton type="submit" variant="white" className="w-full">
+                <GradientButton
+                  type="submit"
+                  variant="primary"
+                  className="w-full"
+                >
                   Confirm Appointment
                 </GradientButton>
               </form>
@@ -232,14 +216,14 @@ export default function AppointmentCTA() {
               <AnimatePresence>
                 {submitted && (
                   <motion.div
-                    className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-white text-sm font-medium shadow-luxe whitespace-nowrap"
+                    className="absolute -bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-2 px-5 py-3 rounded-full bg-ink text-white text-xs font-medium whitespace-nowrap"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     role="status"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-rose-soft" />
-                    Request received! We&apos;ll contact you shortly.
+                    <CheckCircle2 className="w-3.5 h-3.5 text-rose-soft" />
+                    Request received — we&apos;ll contact you shortly.
                   </motion.div>
                 )}
               </AnimatePresence>

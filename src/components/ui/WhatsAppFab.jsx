@@ -17,17 +17,13 @@ export default function WhatsAppFab() {
       rel="noreferrer noopener"
       aria-label="Chat with us on WhatsApp"
       title="Chat on WhatsApp"
-      className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-luxe ring-1 ring-white/30"
-      initial={{ opacity: 0, scale: 0.8, y: 30 }}
+      className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-soft ring-1 ring-white/30"
+      initial={{ opacity: 0, scale: 0.8, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ delay: 1.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ scale: 1.08 }}
+      transition={{ delay: 1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ scale: 1.06 }}
       whileTap={{ scale: 0.94 }}
     >
-      <span
-        aria-hidden
-        className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-40"
-      />
       <WhatsAppGlyph className="relative w-6 h-6 sm:w-7 sm:h-7" />
     </motion.a>
   );
