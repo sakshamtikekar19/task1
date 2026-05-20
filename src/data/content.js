@@ -67,7 +67,7 @@ export const services = [
       'Professional-grade whitening for a radiant, even smile — safe, fast, and clinically proven results.',
     icon: 'Sun',
     image:
-      'https://images.unsplash.com/photo-1581585504825-87e64c98aacd?w=800&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     id: 'smile-design',
@@ -85,7 +85,7 @@ export const services = [
       'Discreet orthodontic solutions including clear aligners for perfectly aligned teeth at any age.',
     icon: 'AlignCenter',
     image:
-      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/3779706/pexels-photo-3779706.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];
 
@@ -96,7 +96,7 @@ export const whyChooseUs = [
     description: 'Digital imaging, 3D scanning, and laser-assisted procedures for precision outcomes.',
     icon: 'Cpu',
     image:
-      'https://images.unsplash.com/photo-1579684385127-1ef15d558a1a?w=800&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/3762460/pexels-photo-3762460.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '02',
@@ -104,7 +104,7 @@ export const whyChooseUs = [
     description: 'Comfort-first protocols with gentle anesthesia and anxiety-free treatment experiences.',
     icon: 'HeartPulse',
     image:
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da3a56?w=800&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/4269933/pexels-photo-4269933.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '03',
@@ -112,7 +112,7 @@ export const whyChooseUs = [
     description: 'Over 12 years of surgical expertise with thousands of successful patient outcomes.',
     icon: 'GraduationCap',
     image:
-      'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '04',
@@ -120,7 +120,7 @@ export const whyChooseUs = [
     description: 'Hospital-grade sterilization, single-use instruments, and strict infection control standards.',
     icon: 'ShieldCheck',
     image:
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/3762456/pexels-photo-3762456.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '05',
@@ -128,7 +128,7 @@ export const whyChooseUs = [
     description: 'Every smile plan is uniquely designed around your goals, lifestyle, and comfort.',
     icon: 'UserCheck',
     image:
-      'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=800&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/2774067/pexels-photo-2774067.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];
 
@@ -196,7 +196,7 @@ export const gallery = [
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1579684385127-1ef15d558a1a?w=700&q=80&auto=format&fit=crop',
+    src: 'https://images.pexels.com/photos/3762460/pexels-photo-3762460.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Advanced dental equipment',
     caption: 'Advanced Technology',
     span: 'col-span-1 row-span-2',
@@ -210,23 +210,23 @@ export const gallery = [
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1598256989800-fe5f95da3a56?w=1000&q=80&auto=format&fit=crop',
+    src: 'https://images.pexels.com/photos/4269933/pexels-photo-4269933.jpeg?auto=compress&cs=tinysrgb&w=1000',
     alt: 'Dental team at work',
     caption: 'Expert Team',
     span: 'col-span-2 row-span-1',
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1581585504825-87e64c98aacd?w=700&q=80&auto=format&fit=crop',
+    src: 'https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Radiant healthy smile close-up',
     caption: 'Whitening Results',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=80&auto=format&fit=crop',
-    alt: 'Clear aligners detail',
-    caption: 'Clear Aligners',
+    src: 'https://images.pexels.com/photos/3779706/pexels-photo-3779706.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'Healthy clear smile close-up',
+    caption: 'Healthy Smiles',
     span: 'col-span-1 row-span-1',
   },
 ];
@@ -265,7 +265,7 @@ export const processSteps = [
       'Digital scans, X-rays, and a one-on-one discussion to map your unique smile blueprint.',
     icon: 'Stethoscope',
     image:
-      'https://images.unsplash.com/photo-1579684385127-1ef15d558a1a?w=600&q=80&auto=format&fit=crop',
+      'https://images.pexels.com/photos/3762456/pexels-photo-3762456.jpeg?auto=compress&cs=tinysrgb&w=600',
   },
   {
     number: '03',
